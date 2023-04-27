@@ -38,9 +38,9 @@ class CustomTabs{
 
                 if (this.options.setClassAtInit){
                     if (i == this.currentSlide){
-                        //btn.setAttribute("class", "custom-tabcontrol custom-tabcontrol-active");
+                        btn.setAttribute("class", `${this.options.activeBtnClass} ${this.options.baseBtnClass}`);
                     }else{
-                        //btn.setAttribute("class", "custom-tabcontrol");
+                        btn.setAttribute("class", `${this.options.baseBtnClass}`);
                     }
                 }
                 
@@ -83,7 +83,6 @@ class CustomTabs{
         this.buttons[this.currentSlide].classList.add(this.options.activeBtnClass);
 
         //remove current active btn style class
-        document.querySelector(".custom-tabcontrol-active").classList.remove("custom-tabcontrol-active");
         this.buttons[this.currentSlide].classList.add("custom-tabcontrol-active");
     }
 

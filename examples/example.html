@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Control</title>
+
+    <script src="../src/customtabs.js"></script>
+</head>
+<body>
+    <div>
+        <button id="btn1">Tab 1</button>
+        <button id="btn2">Tab 2</button>
+        <button id="btn3">Tab 3</button>
+    </div>
+    <hr>
+
+    <div>
+        <div id="tabcont1" style="color:chocolate;">Tab container 1</div>
+        <div id="tabcont2" style="color:violet;">Tab container 2</div>
+        <div id="tabcont3" style="color:darkcyan;">Tab container 3</div>
+    </div>
+
+
+    <script>
+        //initilize
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const btns = [
+                "#btn1",
+                "#btn2",
+                "#btn3"
+            ];
+            const conts = [
+                "#tabcont1",
+                "#tabcont2",
+                "#tabcont3"
+            ];
+            const tabs = new CustomTabs(btns, conts, {
+                activeBtnClass:"tab-btn-active",
+                baseBtnClass:"tab-btn",
+                setClassAtInit:true
+            });
+        })
+    </script>
+
+    <style>
+        .tab-btn{
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border: 1px solid coral;
+        }
+
+        .tab-btn-active{
+            background-color: coral;
+        }
+    </style>
+</body>
+</html>
