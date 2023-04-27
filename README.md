@@ -17,3 +17,13 @@ const tab1 = new CustomTabs(["#btn1"], ["#cont1"], {
     setClassAtInit:false
 });
 ```
+
+<br>
+
+## Other Methods
+
+```javascript
+tab1.NextSlide(); //show next slide
+tab1.PreviousSlide(); //show previous slide
+tab1.ShowSlide(2); //show a slide by index
+```
